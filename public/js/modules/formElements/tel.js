@@ -114,7 +114,7 @@ export default class tel extends formElements {
 				},
 				" ",
 			);
-			let resp = await this.api.post("https://air-pax.onrender.com/api/v1/validate/tel", { number });
+			let resp = await this.api.post("/api/v1/validate/tel", { number });
 			switch (resp.status) {
 				case "error":
 					if (this.attribute("unique")) {

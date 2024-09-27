@@ -65,7 +65,7 @@ export default class email extends formElements {
 					return;
 				}
 				try {
-					let resp = await this.api.post("https://air-pax.onrender.com/api/v1/validate/email", { email });
+					let resp = await this.api.post("/api/v1/validate/email", { email });
 					switch (resp.status) {
 						case "error":
 							let errorDOM = this.shadow.querySelector(".error");
